@@ -36,7 +36,7 @@ public class AlumnosTest {
 
 	/**
 	 * Test method for {@link unit9_b.Alumno#validaNif(java.lang.String)}.
-	 * Testa para el Caso 1, la longitud del nif no es de 9 caracteres.
+	 * Test para el Caso 1, la longitud del nif no es de 9 caracteres.
 	 */
 	@Test
 	public void test1ValidaNif() {
@@ -44,6 +44,17 @@ public class AlumnosTest {
 		
 		assertFalse(alumno.validaNif(nif));
 	}
+	
+	/**
+	 * Test method for {@link unit9_b.Alumno#validaNif(java.lang.String)}.
+	 * Test para el Caso 2, los 8 primeros caracteres no son un número válido.
+	 */
+	@Test
+	public void test2ValidaNif() {
+		String nif="2A15740P";
+		
+		assertFalse(alumno.validaNif(nif));
+	}	
 
 	/**
 	 * Test method for {@link unit9_b.Alumno#calculaTasaMatricula(int, boolean, boolean)}.
