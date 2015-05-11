@@ -51,10 +51,21 @@ public class AlumnosTest {
 	 */
 	@Test
 	public void test2ValidaNif() {
-		String nif="2A15740P";
+		String nif="91b75537E";
 		
 		assertFalse(alumno.validaNif(nif));
 	}	
+	
+	/**
+	 * Test method for {@link unit9_b.Alumno#validaNif(java.lang.String)}.
+	 * Testa para el Caso 3, el nif es correcto.
+	 */
+	@Test
+	public void test3ValidaNif() {
+		String nif="91075537E";
+		
+		assertTrue(alumno.validaNif(nif));
+	}
 
 	/**
 	 * Test method for {@link unit9_b.Alumno#calculaTasaMatricula(int, boolean, boolean)}.
