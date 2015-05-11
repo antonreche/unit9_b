@@ -58,7 +58,7 @@ public class AlumnosTest {
 	
 	/**
 	 * Test method for {@link unit9_b.Alumno#validaNif(java.lang.String)}.
-	 * Testa para el Caso 3, el nif es correcto.
+	 * Test para el Caso 3, el nif es correcto.
 	 */
 	@Test
 	public void test3ValidaNif() {
@@ -69,10 +69,15 @@ public class AlumnosTest {
 
 	/**
 	 * Test method for {@link unit9_b.Alumno#calculaTasaMatricula(int, boolean, boolean)}.
-	 *
+	 * Test para el Caso 1, edad<25, repetidor y no es familia numerosa, resultado esperado tasa=2000;
+	 */
 	@Test
-	public void testCalculaTasaMatricula() {
-		fail("Not yet implemented");
+	public void test1CalculaTasaMatricula() {
+		boolean repetidor=true;
+		boolean familiaNumerosa=false;
+		int edad=24;
+		
+		assertEquals(alumno.calculaTasaMatricula(edad, familiaNumerosa, repetidor),2000f,0.00);
 	}
-*/
+
 }
