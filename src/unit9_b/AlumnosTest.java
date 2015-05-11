@@ -105,5 +105,18 @@ public class AlumnosTest {
 		
 		assertEquals(alumno.calculaTasaMatricula(edad, familiaNumerosa, repetidor),250f,0.00);
 	}
+	
+	/**
+	 * Test method for {@link unit9_b.Alumno#calculaTasaMatricula(int, boolean, boolean)}.
+	 * Test para el Caso 4, edad 55, es familia numerosa, resultado esperado tasa=150;
+	 */
+	@Test
+	public void test4CalculaTasaMatricula() {
+		boolean repetidor=true;
+		boolean familiaNumerosa=true;
+		int edad=55;
+		
+		assertEquals(alumno.calculaTasaMatricula(edad, familiaNumerosa, repetidor),150f,0.00);
+	}
 
 }
